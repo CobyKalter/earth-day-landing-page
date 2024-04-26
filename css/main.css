@@ -108,6 +108,14 @@ body {
     margin: 30px;
     width: auto;
     max-width: 1400px;
+/* Starry backgound found here: https://stackoverflow.com/questions/33948011/creating-a-starry-background-in-css*/
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 h1 {
@@ -120,6 +128,8 @@ h2 {
     font-family: 'Kanit', 'sans serif';
     font-size: 1.5em;
     font-weight: 500;
+    border-bottom: 2px solid #7FBD47;
+    padding-bottom: 15px;
 }
 
 a {
@@ -131,13 +141,21 @@ a {
 /* HEADER STYLING */
 
 header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     margin: 30px 0 60px 0;
 }
 
-#earth-img {
+header h1{
     text-align: center;
+}
+
+#earth-img {
     max-width: 200px;
     max-width: 200px;
+    filter: drop-shadow(#40c0ed 0 0 10px);
 }
 
 /* SECTION STYLING */
@@ -151,6 +169,20 @@ article {
     margin: 110px 0 105px 0;
 }
 
+article ul {
+    list-style: none;
+}
+/* Emojis from emojipedia.org */
+ul li:nth-child(1)::marker { content: "♻️"; }
+ul li:nth-child(2)::marker { content: "🗑️"; }
+ul li:nth-child(3)::marker { content: "💧"; }
+ul li:nth-child(4)::marker { content: "🌱"; }
+ul li:nth-child(5)::marker { content: "🧑‍🏫"; }
+
+article ul li {
+    padding-left: 10px;
+}
+
 .action-call p {
     margin-bottom: 40px;
 }
@@ -159,15 +191,46 @@ article {
     border: solid 1px white;
     border-radius: 5px;
     margin-top: 15px;
-    padding: 5px;
+    padding: 10px 25px;
+}
+
+.action-call a:hover{
+    background: -webkit-linear-gradient( #7FBD47, #40c0ed);
+    font-weight: 700;
 }
 
 /* TESTIMONIAL AND EVENTS DIVS STYLING */
 
+.testimonial {
+    margin: 110px 0 105px 0;
+}
 
+.testimonial p {
+    font-style: italic;
+    margin: 35px 10px;;
+}
+
+.events {
+    margin: 120px 0 120px 0;
+}
+
+.events a {
+    color: #40c0ed;
+}
+
+.events a:hover{
+   text-decoration: underline;
+   text-decoration-color: #7FBD47;
+   font-weight: 700;
+}
 
 /* FOOTER STYLING */
 
+footer {
+    border-top: 1px solid #40c0ed;;
+    margin: 10px;
+    text-align: center;
+}
 
 /* TABLET STYLING */
 @media only screen and (min-width: 768px) {
