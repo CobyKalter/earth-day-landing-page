@@ -101,6 +101,7 @@ html {
 }
 
 body {
+    background-image: url("../img/stars.jpg");
     background-color: black;
     color: white;
     font-family: 'Open sans', 'sans-serif';
@@ -108,14 +109,11 @@ body {
     margin: 30px;
     width: auto;
     max-width: 1400px;
-/* Starry backgound found here: https://stackoverflow.com/questions/33948011/creating-a-starry-background-in-css*/
-    background-image:
-    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+/* Starry backgound found here: <a href="https://www.freepik.com/free-photo/sky-astrology-cosmos-galaxy-starry_2861997.htm#query=black%20starry%20sky&position=19&from_view=keyword&track=ais&uuid=9c5684a4-0863-4b57-adaf-9f28ff10586b">Image by rawpixel.com</a> on Freepik */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -235,9 +233,111 @@ footer {
 /* TABLET STYLING */
 @media only screen and (min-width: 768px) {
 
+    /* BASE STYLING */
+
+    body {
+        font-size: 1.15rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* HEADER STYLING */
+
+    header {
+        margin-top: 75px;
+    }
+
+    #earth-img {
+        max-width: 250px;
+    }
+
+    /* SECTION STYLING */
+
+    section {
+        margin: 175px 130px 175px 130px;
+    }
+
+    section article {
+        margin: 200px 0 200px 0;
+    }
+
+    /* TESTIMONIAL and EVENTS */
+
+    .testimonial {
+        margin: 110px 130px 50px 130px;
+    }
+
+    .events {
+        margin: 40px 130px 125px 130px;
+    }
+    
+
+    /* FOOTER */
+
+    footer {
+        margin: 75px 10px 30px 10px;
+    }
+    
 }
 
 /* DESKTOP STYLING */
 @media only screen and (min-width: 1200px) {
+
+    /* BASE STYLING */
+
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 3.25rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+    
+    /* HEADER STYLING */
+
+    header {
+        margin-top: 125px;
+    }
+
+    #earth-img {
+        max-width: 300px;
+    }
+
+    /* SECTION STYLING */
+
+    section {
+        margin: 250px 275px 250px 275px;
+    }
+
+    section article {
+        margin: 300px 0 300px 0;
+    }
+
+    /* TESTIMONIAL and EVENTS */
+
+    .testimonial {
+        margin: 110px 200px 50px 200px;
+    }
+
+    .events {
+        margin: 40px 200px 175px 200px;
+    }
+    
+
+    /* FOOTER */
+
+    footer {
+        margin: 100px 10px 30px 10px;
+    }
 
 }
