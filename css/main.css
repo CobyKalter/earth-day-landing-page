@@ -136,6 +136,7 @@ a {
     text-decoration: none;
 }
 
+
 /* HEADER STYLING */
 
 header {
@@ -150,21 +151,29 @@ header h1{
     text-align: center;
 }
 
+/* Earth Flosting Animation */
+@keyframes float { 
+   50% { transform: translateY(5%);}
+ }
+
 #earth-img {
     max-width: 200px;
     max-width: 200px;
     filter: drop-shadow(#40c0ed 0 0 10px);
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 /* SECTION STYLING */
 
 section {
-    margin: 60px 0 60px 0;
+    margin: 100px 0 180px 0;
 }
 
 article {
     /* border: solid 2px #33cc33; */
-    margin: 110px 0 105px 0;
+    margin: 110px 0 185px 0;
 }
 
 article ul {
